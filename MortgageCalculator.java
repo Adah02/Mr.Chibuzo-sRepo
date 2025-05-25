@@ -16,11 +16,7 @@ public class MortgageCalculator {
 
 	final double constantPercentage = 100;
 	double actualRate = (annualPercentageRate / constantPercentage);
-	double annualInterestRate = (actualRate * (Math.pow((1 + actualRate),duration)));
-
-	double actualRateAndYears = (Math.pow((1 + actualRate),duration) - 1);
-
-	double mortgage = (principalAmount * (annualInterestRate / actualRateAndYears));
+	double mortgage = (principalAmount * (Math.pow((1 + actualRate),duration)));
 	
 	final double monthsPerYear = 12;
 	double monthlyPayment = mortgage / (duration * monthsPerYear);
