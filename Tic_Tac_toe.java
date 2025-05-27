@@ -15,11 +15,14 @@ public class Tic_Tac_toe {
 	System.out.println("\n");
 	int toss = (int)((Math.random() * 2) + 1);
 
-	int userChoice;
+	char currentPlayer = '0';
+	int userChoice = 0;
 	if(toss == 1){
 	System.out.println("Player 1 Starts");
+	currentPlayer = player1;
 	}else{
 		System.out.println("Player 2 Starts");
+		currentPlayer = player2;
 	}
 
 	int counter = 0;
@@ -35,22 +38,67 @@ public class Tic_Tac_toe {
 	System.out.printf("  %s | %s | %s%n ", boxes[6], boxes[7], boxes[8]);
 	System.out.print("\n");
 		
-		
 		System.out.print("Player 1: ");
 		userChoice = input.nextInt();
 		counter += 1;
 		switch(userChoice){
 
-		case 1: 
-		case 2:
-		case 3:
-		case 4:
-		case 5:
-		case 6:
-		case 7:
-		case 8:
-		case 9:
+		case 1: {
+			boxes[0] = player1; choice = true;
+			}
+		case 2:{
+			boxes[1] = player1; choice = true;
+			}
 
+		case 3:{
+			if (currentPlayer == player1){
+			boxes[2] = player1; choice = true;
+			} else{
+			boxes[2] = player2; choice = true;
+			 }
+			}
+		case 4:{
+			if (currentPlayer == player1){
+			boxes[3] = player1; choice = true;
+			} else{
+			boxes[3] = player2; choice = true;
+			 }
+			}
+		case 5:{
+			if (currentPlayer == player1){
+			boxes[4] = player1; choice = true;
+			} else{
+			boxes[4] = player2; choice = true;
+			 }
+			}
+		case 6:{
+			if (currentPlayer == player1){
+			boxes[5] = player1; choice = true;
+			} else{
+			boxes[5] = player2; choice = true;
+			 }
+			}
+		case 7:{
+			if (currentPlayer == player1){
+			boxes[6] = player1; choice = true;
+			} else{
+			boxes[6] = player2; choice = true;
+			 }
+			}
+		case 8:{
+			if (currentPlayer == player1){
+			boxes[7] = player1; choice = true;
+			} else{
+			boxes[7] = player2; choice = true;
+			 }
+			}
+		case 9:{
+			if (currentPlayer == player1){
+			boxes[8] = player1; choice = true;
+			} else{
+			boxes[8] = player2; choice = true;
+			 }
+			}
 		}
 
 	if (boxes[0] == player1 && boxes[1] == player1 && boxes[2] == player1 || 
