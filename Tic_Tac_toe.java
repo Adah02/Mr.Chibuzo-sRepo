@@ -40,6 +40,7 @@ public class Tic_Tac_toe {
 		
 		System.out.print("Player 1: ");
 		userChoice = input.nextInt();
+		
 		counter += 1;
 		switch(userChoice){
 
