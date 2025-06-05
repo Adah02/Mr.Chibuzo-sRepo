@@ -16,7 +16,7 @@ public class Tic_Tac_toe {
 	int toss = (int)((Math.random() * 2) + 1);
 
 	char currentPlayer = '0';
-	int userChoice = 0;
+	char userChoice =' ';
 	if(toss == 1){
 	System.out.println("Player 1 Starts");
 	currentPlayer = player1;
@@ -27,6 +27,7 @@ public class Tic_Tac_toe {
 
 	int counter = 0;
 	boolean choice = true;
+
 	while (choice = true && counter < 9){ 
 	int count1 = 0; int count2 = 0; int count3 = 0; int count4 = 0; int count5 = 0;
 	int count6 = 0; int count7 = 0; int count8 = 0; int count9 = 0; 
@@ -38,68 +39,64 @@ public class Tic_Tac_toe {
 	System.out.printf("  %s | %s | %s%n ", boxes[6], boxes[7], boxes[8]);
 	System.out.print("\n");
 		
+	while (counter != 5){
 		System.out.print("Player 1: ");
-		userChoice = input.nextInt();
-		
-		counter += 1;
+		userChoice = input.next().charAt(0);
+		choice = true;
+		for(int index = 1; index < 2; index++){
+			System.out.print("Player 2: ");
+			userChoice = input.next().charAt(0);
+			choice = true;
+			counter += 1;
+			}
+		}
 		switch(userChoice){
 
 		case 1: {
-			boxes[0] = player1; choice = true;
-			}
+			if (boxes[0] != player1 || boxes[0] != player2 || boxes[0] != '1' ){
+				boxes[0] = userChoice; choice = true;
+				}
+			} break;
 		case 2:{
-			boxes[1] = player1; choice = true;
-			}
-
+				if (boxes[1] != player1 || boxes[1] != player2 || boxes[1] != '2' ){
+				boxes[1] = userChoice; choice = true;
+				}
+			} break;
 		case 3:{
-			if (currentPlayer == player1){
-			boxes[2] = player1; choice = true;
-			} else{
-			boxes[2] = player2; choice = true;
-			 }
-			}
+			if (boxes[2] != player1 || boxes[2] != player2 || boxes[2] != '3' ){
+				boxes[2] = userChoice; choice = true;
+				}
+			} break;
 		case 4:{
-			if (currentPlayer == player1){
-			boxes[3] = player1; choice = true;
-			} else{
-			boxes[3] = player2; choice = true;
-			 }
-			}
+			if (boxes[3] != player1 || boxes[3] != player2 || boxes[3] != '4' ){
+				boxes[3] = userChoice; choice = true;
+				}
+			} break;
 		case 5:{
-			if (currentPlayer == player1){
-			boxes[4] = player1; choice = true;
-			} else{
-			boxes[4] = player2; choice = true;
-			 }
-			}
+			if (boxes[4] != player1 || boxes[4] != player2 || boxes[4] != '5' ){
+				boxes[4] = userChoice; choice = true;
+				}
+			} break;
 		case 6:{
-			if (currentPlayer == player1){
-			boxes[5] = player1; choice = true;
-			} else{
-			boxes[5] = player2; choice = true;
-			 }
-			}
+			if (boxes[5] != player1 || boxes[5] != player2 || boxes[5] != '6' ){
+				boxes[5] = userChoice; choice = true;
+				}
+			} break;
 		case 7:{
-			if (currentPlayer == player1){
-			boxes[6] = player1; choice = true;
-			} else{
-			boxes[6] = player2; choice = true;
-			 }
-			}
+			if (boxes[6] != player1 || boxes[6] != player2 || boxes[6] != '7' ){
+				boxes[6] = userChoice; choice = true;
+				}
+			} break;
 		case 8:{
-			if (currentPlayer == player1){
-			boxes[7] = player1; choice = true;
-			} else{
-			boxes[7] = player2; choice = true;
-			 }
-			}
+			if (boxes[7] != player1 || boxes[7] != player2 || boxes[7] != '8' ){
+				boxes[7] = userChoice; choice = true;
+				}
+			} break;
 		case 9:{
-			if (currentPlayer == player1){
-			boxes[8] = player1; choice = true;
-			} else{
-			boxes[8] = player2; choice = true;
-			 }
-			}
+			if (boxes[8] != player1 || boxes[8] != player2 || boxes[8] != '9' ){
+				boxes[8] = userChoice; choice = true;
+				}
+			} break;
 		}
 
 	if (boxes[0] == player1 && boxes[1] == player1 && boxes[2] == player1 || 
